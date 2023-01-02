@@ -19,6 +19,10 @@ final class ContactsProvider {
         persistentContainer.viewContext
     }
     
+    var newContext: NSManagedObjectContext {
+        persistentContainer.newBackgroundContext()
+    }
+    
     private init() {
         
         // 1. Create the contaienr

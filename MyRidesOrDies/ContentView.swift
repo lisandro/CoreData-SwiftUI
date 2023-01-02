@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isShowingNewContact = false
+    var provider = ContactsProvider.shared
+    
     
     var body: some View {
         NavigationStack {
@@ -24,29 +26,28 @@ struct ContentView: View {
                     }
                 }
             }
-        }
-        .toolbar {
-            ToolbarItem(placement: .primaryAction) {
-                Button {
-                    isShowingNewContact.toggle()
-                } label: {
-                    Image(systemName: "plus").font(.title2)
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button {
+                        isShowingNewContact.toggle()
+                    } label: {
+                        Image(systemName: "plus").font(.title2)
+                    }
                 }
             }
-        }
-        .sheet(isPresented: $isShowingNewContact) {
-            NavigationStack {
-                CreateContactView()
+            .sheet(isPresented: $isShowingNewContact) {
+                NavigationStack {
+                    CreateContactView(vm: .init(provider: provider))
+                }
             }
+            .navigationTitle("Contacts")
         }
-        .navigationTitle("Contacts")
+        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
-            ContentView()
-        }
+        ContentView()
     }
 }
