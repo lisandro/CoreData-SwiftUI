@@ -13,6 +13,10 @@
 		A05BD8F029633B3000478C87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A05BD8EF29633B3000478C87 /* Preview Assets.xcassets */; };
 		A05BD8F829633B4000478C87 /* ContactsDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A05BD8F629633B4000478C87 /* ContactsDataModel.xcdatamodeld */; };
 		A05BD8FA29633C8600478C87 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05BD8F929633C8600478C87 /* Contact.swift */; };
+		A05BD8FE29633DD100478C87 /* ContactsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05BD8FD29633DD100478C87 /* ContactsProvider.swift */; };
+		A05BD900296340B200478C87 /* ContactRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05BD8FF296340B200478C87 /* ContactRowView.swift */; };
+		A05BD902296340E800478C87 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05BD901296340E800478C87 /* ContactDetailView.swift */; };
+		A05BD9042963424B00478C87 /* CreateContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05BD9032963424B00478C87 /* CreateContactView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		A05BD8EF29633B3000478C87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A05BD8F729633B4000478C87 /* ContactsDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactsDataModel.xcdatamodel; sourceTree = "<group>"; };
 		A05BD8F929633C8600478C87 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		A05BD8FD29633DD100478C87 /* ContactsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsProvider.swift; sourceTree = "<group>"; };
+		A05BD8FF296340B200478C87 /* ContactRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRowView.swift; sourceTree = "<group>"; };
+		A05BD901296340E800478C87 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
+		A05BD9032963424B00478C87 /* CreateContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContactView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +64,13 @@
 		A05BD8E629633B3000478C87 /* MyRidesOrDies */ = {
 			isa = PBXGroup;
 			children = (
+				A05BD8FC29633DC800478C87 /* Provider */,
 				A05BD8FB29633CAE00478C87 /* Model */,
 				A05BD8E729633B3000478C87 /* MyRidesOrDiesApp.swift */,
 				A05BD8E929633B3000478C87 /* ContentView.swift */,
+				A05BD9032963424B00478C87 /* CreateContactView.swift */,
+				A05BD901296340E800478C87 /* ContactDetailView.swift */,
+				A05BD8FF296340B200478C87 /* ContactRowView.swift */,
 				A05BD8F629633B4000478C87 /* ContactsDataModel.xcdatamodeld */,
 				A05BD8EB29633B3000478C87 /* Assets.xcassets */,
 				A05BD8ED29633B3000478C87 /* MyRidesOrDies.entitlements */,
@@ -81,6 +93,14 @@
 				A05BD8F929633C8600478C87 /* Contact.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A05BD8FC29633DC800478C87 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				A05BD8FD29633DD100478C87 /* ContactsProvider.swift */,
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,8 +174,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A05BD8FA29633C8600478C87 /* Contact.swift in Sources */,
+				A05BD8FE29633DD100478C87 /* ContactsProvider.swift in Sources */,
+				A05BD902296340E800478C87 /* ContactDetailView.swift in Sources */,
 				A05BD8F829633B4000478C87 /* ContactsDataModel.xcdatamodeld in Sources */,
 				A05BD8EA29633B3000478C87 /* ContentView.swift in Sources */,
+				A05BD9042963424B00478C87 /* CreateContactView.swift in Sources */,
+				A05BD900296340B200478C87 /* ContactRowView.swift in Sources */,
 				A05BD8E829633B3000478C87 /* MyRidesOrDiesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
