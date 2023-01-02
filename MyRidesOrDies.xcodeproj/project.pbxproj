@@ -18,6 +18,7 @@
 		A05BD902296340E800478C87 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05BD901296340E800478C87 /* ContactDetailView.swift */; };
 		A05BD9042963424B00478C87 /* CreateContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05BD9032963424B00478C87 /* CreateContactView.swift */; };
 		A05BD90729634CDE00478C87 /* EditContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05BD90629634CDE00478C87 /* EditContactViewModel.swift */; };
+		A05BD909296364DD00478C87 /* NoContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05BD908296364DD00478C87 /* NoContactsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		A05BD901296340E800478C87 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 		A05BD9032963424B00478C87 /* CreateContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContactView.swift; sourceTree = "<group>"; };
 		A05BD90629634CDE00478C87 /* EditContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewModel.swift; sourceTree = "<group>"; };
+		A05BD908296364DD00478C87 /* NoContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoContactsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				A05BD8FB29633CAE00478C87 /* Model */,
 				A05BD8E729633B3000478C87 /* MyRidesOrDiesApp.swift */,
 				A05BD8E929633B3000478C87 /* ContentView.swift */,
+				A05BD908296364DD00478C87 /* NoContactsView.swift */,
 				A05BD901296340E800478C87 /* ContactDetailView.swift */,
 				A05BD8FF296340B200478C87 /* ContactRowView.swift */,
 				A05BD8F629633B4000478C87 /* ContactsDataModel.xcdatamodeld */,
@@ -192,6 +195,7 @@
 				A05BD8EA29633B3000478C87 /* ContentView.swift in Sources */,
 				A05BD9042963424B00478C87 /* CreateContactView.swift in Sources */,
 				A05BD900296340B200478C87 /* ContactRowView.swift in Sources */,
+				A05BD909296364DD00478C87 /* NoContactsView.swift in Sources */,
 				A05BD8E829633B3000478C87 /* MyRidesOrDiesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,33 +17,40 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(contacts) { contact in
-                    ZStack(alignment: .leading) {
-                        NavigationLink(destination: ContactDetailView(contact: contact)) {
-                            EmptyView()
+            ZStack {
+                if contacts.isEmpty {
+                    NoContactsView()
+                } else {
+                    List {
+                        ForEach(contacts) { contact in
+                            ZStack(alignment: .leading) {
+                                NavigationLink(destination: ContactDetailView(contact: contact)) {
+                                    EmptyView()
+                                }
+                                .opacity(0)
+                                
+                                ContactRowView(contact: contact)
+                            }
                         }
-                        .opacity(0)
-                        
-                        ContactRowView(contact: contact)
                     }
-                }
-            }
-            .toolbar {
-                ToolbarItem(placement: .primaryAction) {
-                    Button {
-                        isShowingNewContact.toggle()
-                    } label: {
-                        Image(systemName: "plus").font(.title2)
+                    .toolbar {
+                        ToolbarItem(placement: .primaryAction) {
+                            Button {
+                                isShowingNewContact.toggle()
+                            } label: {
+                                Image(systemName: "plus").font(.title2)
+                            }
+                        }
                     }
+                    .sheet(isPresented: $isShowingNewContact) {
+                        NavigationStack {
+                            CreateContactView(vm: .init(provider: provider))
+                        }
+                    }
+                    .navigationTitle("Contacts")
                 }
+                
             }
-            .sheet(isPresented: $isShowingNewContact) {
-                NavigationStack {
-                    CreateContactView(vm: .init(provider: provider))
-                }
-            }
-            .navigationTitle("Contacts")
         }
         
     }
