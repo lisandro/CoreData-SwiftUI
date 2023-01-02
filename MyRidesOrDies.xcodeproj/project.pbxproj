@@ -11,6 +11,8 @@
 		A05BD8EA29633B3000478C87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05BD8E929633B3000478C87 /* ContentView.swift */; };
 		A05BD8EC29633B3000478C87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A05BD8EB29633B3000478C87 /* Assets.xcassets */; };
 		A05BD8F029633B3000478C87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A05BD8EF29633B3000478C87 /* Preview Assets.xcassets */; };
+		A05BD8F829633B4000478C87 /* ContactsDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A05BD8F629633B4000478C87 /* ContactsDataModel.xcdatamodeld */; };
+		A05BD8FA29633C8600478C87 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05BD8F929633C8600478C87 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		A05BD8EB29633B3000478C87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A05BD8ED29633B3000478C87 /* MyRidesOrDies.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyRidesOrDies.entitlements; sourceTree = "<group>"; };
 		A05BD8EF29633B3000478C87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A05BD8F729633B4000478C87 /* ContactsDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactsDataModel.xcdatamodel; sourceTree = "<group>"; };
+		A05BD8F929633C8600478C87 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +56,10 @@
 		A05BD8E629633B3000478C87 /* MyRidesOrDies */ = {
 			isa = PBXGroup;
 			children = (
+				A05BD8FB29633CAE00478C87 /* Model */,
 				A05BD8E729633B3000478C87 /* MyRidesOrDiesApp.swift */,
 				A05BD8E929633B3000478C87 /* ContentView.swift */,
+				A05BD8F629633B4000478C87 /* ContactsDataModel.xcdatamodeld */,
 				A05BD8EB29633B3000478C87 /* Assets.xcassets */,
 				A05BD8ED29633B3000478C87 /* MyRidesOrDies.entitlements */,
 				A05BD8EE29633B3000478C87 /* Preview Content */,
@@ -67,6 +73,14 @@
 				A05BD8EF29633B3000478C87 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A05BD8FB29633CAE00478C87 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A05BD8F929633C8600478C87 /* Contact.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A05BD8FA29633C8600478C87 /* Contact.swift in Sources */,
+				A05BD8F829633B4000478C87 /* ContactsDataModel.xcdatamodeld in Sources */,
 				A05BD8EA29633B3000478C87 /* ContentView.swift in Sources */,
 				A05BD8E829633B3000478C87 /* MyRidesOrDiesApp.swift in Sources */,
 			);
@@ -354,6 +370,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A05BD8F629633B4000478C87 /* ContactsDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A05BD8F729633B4000478C87 /* ContactsDataModel.xcdatamodel */,
+			);
+			currentVersion = A05BD8F729633B4000478C87 /* ContactsDataModel.xcdatamodel */;
+			path = ContactsDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A05BD8DC29633B3000478C87 /* Project object */;
 }
