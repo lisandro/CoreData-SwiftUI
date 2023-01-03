@@ -7,9 +7,14 @@
 
 import SwiftUI
 
+struct SearchConfig: Equatable {
+    var query: String = ""
+}
+
 struct ContentView: View {
     @FetchRequest(fetchRequest: Contact.all()) private var contacts
     @State private var contactToEdit: Contact?
+    @State private var searchConfig = SearchConfig()
     var provider = ContactsProvider.shared
     
     
@@ -51,26 +56,29 @@ struct ContentView: View {
                             }
                         }
                     }
-                    .toolbar {
-                        ToolbarItem(placement: .primaryAction) {
-                            Button {
-                                contactToEdit = .empty(context: provider.newContext)
-                            } label: {
-                                Image(systemName: "plus").font(.title2)
-                            }
-                        }
-                    }
-                    .sheet(item: $contactToEdit, onDismiss: {
-                        contactToEdit = nil
-                    }, content: { contact in
-                        NavigationStack {
-                            CreateContactView(vm: .init(provider: provider, contact: contact))
-                        }
-                    })
-                    .navigationTitle("Contacts")
                 }
-                
             }
+            .searchable(text: $searchConfig.query)
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button {
+                        contactToEdit = .empty(context: provider.newContext)
+                    } label: {
+                        Image(systemName: "plus").font(.title2)
+                    }
+                }
+            }
+            .sheet(item: $contactToEdit, onDismiss: {
+                contactToEdit = nil
+            }, content: { contact in
+                NavigationStack {
+                    CreateContactView(vm: .init(provider: provider, contact: contact))
+                }
+            })
+            .onChange(of: searchConfig, perform: { newValue in
+                contacts.nsPredicate = Contact.filter(newValue.query)
+            })
+            .navigationTitle("Contacts")
         }
     }
 }
