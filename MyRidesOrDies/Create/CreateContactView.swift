@@ -10,7 +10,7 @@ import SwiftUI
 struct CreateContactView: View {
     @Environment(\.dismiss) private var dismiss
     @ObservedObject var vm: EditContactViewModel
-    
+    @State private var hasError: Bool = false
     var body: some View {
         List {
             Section("General") {
@@ -42,12 +42,7 @@ struct CreateContactView: View {
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
                 Button("Done") {
-                    do {
-                        try vm.save()
-                        dismiss()
-                    } catch {
-                        print(error)
-                    }
+                    validateContact()
                 }
             }
             
@@ -56,6 +51,24 @@ struct CreateContactView: View {
                     dismiss()
                 }
             }
+        }
+        .alert("Something aint right", isPresented: $hasError, actions: {}) {
+            Text("It looks like your form is invalid")
+        }
+    }
+}
+
+private extension CreateContactView {
+    func validateContact() {
+        if vm.contact.isValid {
+            do {
+                try vm.save()
+                dismiss()
+            } catch {
+                print(error)
+            }
+        } else {
+            hasError = true
         }
     }
 }

@@ -25,6 +25,12 @@ final class Contact: NSManagedObject, Identifiable {
         "\(isBirthday ? "🎈": "") \(name)"
     }
     
+    var isValid: Bool {
+        !name.isEmpty &&
+        !email.isEmpty &&
+        !phoneNumber.isEmpty
+    }
+    
     override func awakeFromInsert() {
         super.awakeFromInsert()
         setPrimitiveValue(Date.now, forKey: "dob")
