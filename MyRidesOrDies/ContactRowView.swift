@@ -10,8 +10,9 @@ import SwiftUI
 struct ContactRowView: View {
     
     @Environment(\.managedObjectContext) private var moc
-    
     @ObservedObject var contact: Contact
+    
+    let provider: ContactsProvider
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -42,9 +43,7 @@ private extension ContactRowView {
     func toggleFave() {
         contact.isFavourite.toggle()
         do {
-            if moc.hasChanges {
-                try moc.save()
-            }
+            try provider.persist(in: moc)
         } catch {
             print(error)
         }
@@ -54,6 +53,8 @@ private extension ContactRowView {
 
 struct ContactRowView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactRowView(contact: .preview())
+        let previewProvider = ContactsProvider.shared
+        ContactRowView(contact: .preview(context: previewProvider.viewContext),
+                       provider: previewProvider)
     }
 }
