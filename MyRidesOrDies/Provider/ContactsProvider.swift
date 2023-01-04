@@ -27,7 +27,7 @@ final class ContactsProvider {
         
         // 1. Create the contaienr
         persistentContainer = NSPersistentContainer(name: "ContactsDataModel") // exact like ContactsDataModel.xcdatamodeld
-        if EnvironmentValues.isPreview {
+        if EnvironmentValues.isPreview || Thread.current.isRunningXCTest {
             persistentContainer.persistentStoreDescriptions.first?.url = .init(URL(fileURLWithPath: "/dev/null"))
         }
         persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
@@ -65,5 +65,20 @@ final class ContactsProvider {
 extension EnvironmentValues {
     static var isPreview: Bool {
         return ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1"
+    }
+}
+
+extension Thread {
+    var isRunningXCTest: Bool {
+        for key in self.threadDictionary.allKeys {
+            guard let keyAsString = key as? String else {
+                continue
+            }
+            
+            if keyAsString.split(separator: ".").contains("xctest") {
+                return true
+            }
+        }
+        return false
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A02310C429661323005950EE /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02310C329661323005950EE /* ModelTests.swift */; };
 		A05BD8E829633B3000478C87 /* MyRidesOrDiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05BD8E729633B3000478C87 /* MyRidesOrDiesApp.swift */; };
 		A05BD8EA29633B3000478C87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05BD8E929633B3000478C87 /* ContentView.swift */; };
 		A05BD8EC29633B3000478C87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A05BD8EB29633B3000478C87 /* Assets.xcassets */; };
@@ -21,7 +22,19 @@
 		A05BD909296364DD00478C87 /* NoContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05BD908296364DD00478C87 /* NoContactsView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A02310BE29661305005950EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A05BD8DC29633B3000478C87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A05BD8E329633B3000478C87;
+			remoteInfo = MyRidesOrDies;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		A02310BA29661305005950EE /* MyRidesOrDiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyRidesOrDiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A02310C329661323005950EE /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		A05BD8E429633B3000478C87 /* MyRidesOrDies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRidesOrDies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05BD8E729633B3000478C87 /* MyRidesOrDiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRidesOrDiesApp.swift; sourceTree = "<group>"; };
 		A05BD8E929633B3000478C87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,6 +52,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A02310B729661305005950EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A05BD8E129633B3000478C87 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,10 +69,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A02310BB29661305005950EE /* MyRidesOrDiesTests */ = {
+			isa = PBXGroup;
+			children = (
+				A02310C329661323005950EE /* ModelTests.swift */,
+			);
+			path = MyRidesOrDiesTests;
+			sourceTree = "<group>";
+		};
 		A05BD8DB29633B3000478C87 = {
 			isa = PBXGroup;
 			children = (
 				A05BD8E629633B3000478C87 /* MyRidesOrDies */,
+				A02310BB29661305005950EE /* MyRidesOrDiesTests */,
 				A05BD8E529633B3000478C87 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				A05BD8E429633B3000478C87 /* MyRidesOrDies.app */,
+				A02310BA29661305005950EE /* MyRidesOrDiesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,6 +150,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A02310B929661305005950EE /* MyRidesOrDiesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A02310C229661305005950EE /* Build configuration list for PBXNativeTarget "MyRidesOrDiesTests" */;
+			buildPhases = (
+				A02310B629661305005950EE /* Sources */,
+				A02310B729661305005950EE /* Frameworks */,
+				A02310B829661305005950EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A02310BF29661305005950EE /* PBXTargetDependency */,
+			);
+			name = MyRidesOrDiesTests;
+			productName = MyRidesOrDiesTests;
+			productReference = A02310BA29661305005950EE /* MyRidesOrDiesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A05BD8E329633B3000478C87 /* MyRidesOrDies */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A05BD8F329633B3000478C87 /* Build configuration list for PBXNativeTarget "MyRidesOrDies" */;
@@ -147,6 +195,10 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					A02310B929661305005950EE = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = A05BD8E329633B3000478C87;
+					};
 					A05BD8E329633B3000478C87 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -166,11 +218,19 @@
 			projectRoot = "";
 			targets = (
 				A05BD8E329633B3000478C87 /* MyRidesOrDies */,
+				A02310B929661305005950EE /* MyRidesOrDiesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A02310B829661305005950EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A05BD8E229633B3000478C87 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -183,6 +243,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A02310B629661305005950EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A02310C429661323005950EE /* ModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A05BD8E029633B3000478C87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,7 +270,56 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A02310BF29661305005950EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A05BD8E329633B3000478C87 /* MyRidesOrDies */;
+			targetProxy = A02310BE29661305005950EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		A02310C029661305005950EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QWSBPHB397;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lisandro.MyRidesOrDiesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyRidesOrDies.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyRidesOrDies";
+			};
+			name = Debug;
+		};
+		A02310C129661305005950EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QWSBPHB397;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lisandro.MyRidesOrDiesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyRidesOrDies.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyRidesOrDies";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		A05BD8F129633B3000478C87 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -391,6 +508,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A02310C229661305005950EE /* Build configuration list for PBXNativeTarget "MyRidesOrDiesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A02310C029661305005950EE /* Debug */,
+				A02310C129661305005950EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A05BD8DF29633B3000478C87 /* Build configuration list for PBXProject "MyRidesOrDies" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
